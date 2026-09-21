@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="塔防单机游戏合集 - 提供精选的独立塔防游戏推荐、下载指南及玩法攻略。涵盖策略布局、关卡设计、MOD资源及离线游玩体验。">
+    <meta name="keywords" content="塔防单机游戏, 独立塔防, 策略游戏, 塔防攻略, 离线游戏">
+    <title>塔防单机游戏-精选独立策略游戏与攻略指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --accent-hover: #d35400;
+            --bg-color: #f4f6f7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .search-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .view-all {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .view-all:hover {
+            color: var(--accent-color);
+        }
+
+        /* Featured Grid */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 160px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .card-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .card-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #f0f2f5;
+            color: var(--primary-color);
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .card-btn:hover {
+            background-color: #e4e6e9;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 50px 0;
+            margin-top: 60px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Strategy Guide Section */
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .guide-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .guide-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #f0f0f0;
+            line-height: 1;
+        }
+
+        .guide-content h4 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .guide-content p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .sidebar-box {
+            background: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .sidebar-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-list a {
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px solid #f5f5f5;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .sidebar-list a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2c3e50;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                🛡️ <span>TowerDef</span>Zone
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">热门推荐</a></li>
+                    <li><a href="#">策略攻略</a></li>
+                    <li><a href="#">MOD下载</a></li>
+                    <li><a href="#">社区论坛</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">🔍 搜索游戏</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>探索策略与防守的极致乐趣</h1>
+            <p>汇集全球最优质的独立塔防单机游戏。无需联网，随时随地，在紧张的防线构筑中体验烧脑策略与视听盛宴。</p>
+            <div class="cta-group">
+                <a href="#featured" class="btn btn-primary">立即浏览推荐</a>
+                <a href="#guide" class="btn btn-outline">新手入门指南</a>
+            </div>
+        </section>
+
+        <!-- Featured Games -->
+        <section id="featured" class="container">
+            <div class="section-header">
+                <h2 class="section-title">本周热门推荐</h2>
+                <a href="#" class="view-all">查看全部 &rarr;</a>
+            </div>
+            <div class="grid-4">
+                <!-- Game Card 1 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">新游</span>
+                        <img src="https://picsum.photos/seed/tower1/400/300" alt="游戏封面">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">冰封防线：起源</h3>
+                        <p class="card-desc">经典的策略塔防，拥有全新的物理引擎和极寒主题关卡。你需要利用冰霜法术减缓敌人速度。</p>
+                        <div class="card-meta">
+                            <span>⏱️ 4-6小时</span>
+                            <span>🎮 策略</span>
+                        </div>
+                        <a href="#" class="card-btn">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Game Card 2 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://picsum.photos/seed/tower2/400/300" alt="游戏封面">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">霓虹防线</h3>
+                        <p class="card-desc">赛博朋克风格的塔防游戏，拥有炫酷的霓虹视觉效果和合成器音乐，支持多结局分支。</p>
+                        <div class="card-meta">
+                            <span>⏱️ 5-8小时</span>
+                            <span>🎮 科幻</span>
+                        </div>
+                        <a href="#" class="card-btn">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Game Card 3 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <span class="card-badge">免费</span>
+                        <img src="https://picsum.photos/seed/tower3/400/300" alt="游戏封面">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">丛林守卫战</h3>
+                        <p class="card-desc">结合了植物大战僵尸玩法的休闲塔防，画风可爱，关卡丰富，适合碎片时间游玩。</p>
+                        <div class="card-meta">
+                            <span>⏱️ 2-3小时</span>
+                            <span>🎮 休闲</span>
+                        </div>
+                        <a href="#" class="card-btn">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- Game Card 4 -->
+                <article class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://picsum.photos/seed/tower4/400/300" alt="游戏封面">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">暗夜要塞</h3>
+                        <p class="card-desc">高难度的暗黑风格塔防，强调资源管理和防御塔升级，挑战你的极限反应速度。</p>
+                        <div class="card-meta">
+                            <span>⏱️ 10+小时</span>
+                            <span>🎮 硬核</span>
+                        </div>
+                        <a href="#" class="card-btn">查看详情</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>离线畅玩</h3>
+                        <p>所有收录游戏均支持离线运行，无需担心网络波动，随时随地享受游戏乐趣。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🧠</div>
+                        <h3>深度策略</h3>
+                        <p>不仅仅是放置防守，更包含地形利用、技能连携、资源管理等复杂策略要素。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <h3>独立艺术</h3>
+                        <p>汇集独立开发者的创意结晶，每款游戏都有独特的美术风格和音乐体验。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy Guide -->
+        <section id="guide" class="container">
+            <div class="section-header">
+                <h2 class="section-title">新手攻略与技巧</h2>
+            </div>
+            <div class="guide-layout">
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <span class="guide-number">01</span>
+                        <div class="guide-content">
+                            <h4>理解防御塔属性克制</h4>
+                            <p>在塔防游戏中，物理攻击对重甲敌人效果有限，而魔法攻击则能无视部分防御。合理搭配远程与近战防御塔是获胜关键。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <span class="guide-number">02</span>
+                        <div class="guide-content">
+                            <h4>地形与视野的重要性</h4>
+                            <p>不要盲目在所有路径上建造防御塔。利用高低差、狭窄通道或障碍物来控制敌人移动速度，为你的防御塔争取输出时间。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <span class="guide-number">03</span>
+                        <div class="guide-content">
+                            <h4>经济管理与升级时机</h4>
+                            <p>盲目升级低级防御塔往往得不偿失。学会延迟升级，将资源集中用于关键路径或核心防御塔，确保通关资金链不断裂。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <span class="guide-number">04</span>
+                        <div class="guide-content">
+                            <h4>善用辅助技能</h4>
+                            <p>许多单机塔防游戏提供临时技能（如减速、爆炸、治疗）。这些技能往往能在绝境中扭转乾坤，请留作备用。</p>
+                        </div>
+                    </div>
+                </div>
+                <aside>
+                    <div class="sidebar-box">
+                        <h3>热门分类</h3>
+                        <ul class="sidebar-list">
+                            <li><a href="#">🏰 城堡防御</a></li>
+                            <li><a href="#">👾 外星入侵</a></li>
+                            <li><a href="#">⚔️ 中世纪战争</a></li>
+                            <li><a href="#">🧬 末日生存</a></li>
+                            <li><a href="#">🏰 建筑模拟</a></li>
+                            <li><a href="#">🤖 机器人塔防</a></li>
+                        </ul>
+                        <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
+                            <h3 style="font-size: 1rem; margin-bottom: 10px; color: var(--primary-color);">订阅更新</h3>
+                            <p style="font-size: 0.85rem; color: #666; margin-bottom: 10px;">获取最新塔防游戏推荐。</p>
+                            <input type="email" placeholder="您的邮箱" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 5px;">
+                            <button class="btn btn-primary" style="width: 100%; font-size: 0.9rem; padding: 8px;">订阅</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 15px;">🛡️ <span>TowerDef</span>Zone</div>
+                <p style="font-size: 0.9rem; line-height: 1.6;">专注塔防单机游戏资源与攻略分享，为策略游戏爱好者提供最纯净的游戏体验。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">广告合作</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>游戏分类</h4>
+                <ul>
+                    <li><a href="#">RPG塔防</a></li>
+                    <li><a href="#">即时战略</a></li>
+                    <li><a href="#">模拟经营</a></li>
+                    <li><a href="#">解谜塔防</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门标签</h4>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <span style="background: #2c3e50; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">独立游戏</span>
+                    <span style="background: #2c3e50; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">硬核</span>
+                    <span style="background: #2c3e50; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">像素风</span>
+                    <span style="background: #2c3e50; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">剧情向</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TowerDefZone. All rights reserved. 本站所有游戏资源均来自互联网，仅供学习交流使用。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
