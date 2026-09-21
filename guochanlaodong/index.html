@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国产老动画片-经典怀旧动画回顾与资源整理</title>
+    <meta name="description" content="本站致力于整理和回顾中国国产老动画片，涵盖上海美术电影制片厂经典作品、木偶动画、剪纸动画及水墨动画，提供剧情简介、观看指南与怀旧文化解读。">
+    <meta name="keywords" content="国产老动画片,上海美术电影制片厂,经典动画,怀旧动画,水墨动画,中国动画史">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-hover: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 15px;
+            color: var(--primary-color);
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            bottom: 5px;
+            width: 5px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #f1f3f5;
+            color: var(--text-light);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .intro-text p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .intro-image {
+            width: 100%;
+            height: 300px;
+            background-color: #e9ecef;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Category Nav */
+        .category-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .cat-link {
+            padding: 10px 25px;
+            background-color: white;
+            border: 1px solid #dee2e6;
+            border-radius: 30px;
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: all 0.2s;
+        }
+
+        .cat-link:hover, .cat-link.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 20px 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .footer-col p {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .intro-grid { grid-template-columns: 1fr; }
+            .nav-container { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>♪</span> 经典动画馆
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">经典回顾</a></li>
+                    <li><a href="#">动画流派</a></li>
+                    <li><a href="#">幕后故事</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>重温岁月，回味经典</h1>
+        <p>国产老动画片承载了几代人的童年记忆。这里汇集了上海美术电影制片厂的巅峰之作，从水墨到剪纸，从木偶到折纸，带您回到那个纯真美好的动画时代。</p>
+        <a href="#gallery" class="hero-btn">开始浏览</a>
+    </section>
+
+    <main>
+        <!-- Introduction -->
+        <section class="intro-section">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <h2>中国动画的黄金时代</h2>
+                    <p>上世纪五六十年代至八十年代，是中国动画的“黄金时代”。以上海美术电影制片厂为代表的创作者们，在继承中国传统艺术形式的基础上，融合现代电影语言，创造了《大闹天宫》《哪吒闹海》《小蝌蚪找妈妈》等世界级经典。</p>
+                    <p>这些国产老动画片不仅在国内家喻户晓，更在国际电影节上屡获大奖，被誉为“中国学派”的瑰宝。它们以独特的美术风格、深刻的教育意义和精湛的制作工艺，成为了中国动画不可磨灭的文化符号。</p>
+                </div>
+                <div class="intro-image">
+                    <img src="https://picsum.photos/seed/animation_history/600/400" alt="中国动画历史回顾">
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <h2 class="section-title">动画流派分类</h2>
+        <div class="category-nav">
+            <a href="#" class="cat-link active">全部作品</a>
+            <a href="#" class="cat-link">水墨动画</a>
+            <a href="#" class="cat-link">剪纸动画</a>
+            <a href="#" class="cat-link">木偶动画</a>
+            <a href="#" class="cat-link">折纸动画</a>
+            <a href="#" class="cat-link">美术片</a>
+        </div>
+
+        <!-- Featured Gallery -->
+        <h2 class="section-title" id="gallery">必看经典推荐</h2>
+        <div class="gallery-grid">
+            <!-- Card 1 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/tang_bo/400/300" alt="大闹天宫海报" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">大闹天宫</h3>
+                    <div class="card-meta">
+                        <span>1961-1964年</span>
+                        <span>水墨/动作</span>
+                    </div>
+                    <p class="card-desc">中国动画史上的里程碑之作。讲述了孙悟空大闹天宫的传奇故事，艺术风格借鉴了中国传统壁画与戏曲，场面宏大，色彩绚丽。</p>
+                    <div class="card-footer">
+                        <span class="tag">上海美术电影制片厂</span>
+                        <span class="tag">经典</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/tadpole/400/300" alt="小蝌蚪找妈妈海报" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">小蝌蚪找妈妈</h3>
+                    <div class="card-meta">
+                        <span>1960年</span>
+                        <span>水墨动画</span>
+                    </div>
+                    <p class="card-desc">齐白石大师的水墨画作改编，被誉为“水墨动画的开山之作”。画面灵动，意境深远，展现了自然界的和谐之美。</p>
+                    <div class="card-footer">
+                        <span class="tag">水墨</span>
+                        <span>科普</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/paper_cut/400/300" alt="猪八戒吃西瓜海报" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">猪八戒吃西瓜</h3>
+                    <div class="card-meta">
+                        <span>1958年</span>
+                        <span>剪纸动画</span>
+                    </div>
+                    <p class="card-desc">中国第一部剪纸动画片。色彩鲜艳，造型夸张，生动地刻画了猪八戒贪吃又憨厚的形象，节奏明快，趣味性强。</p>
+                    <div class="card-footer">
+                        <span class="tag">剪纸</span>
+                        <span>幽默</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/puppet/400/300" alt="神笔海报" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">神笔</h3>
+                    <div class="card-meta">
+                        <span>1955年</span>
+                        <span>木偶动画</span>
+                    </div>
+                    <p class="card-desc">中国第一部国际获奖的木偶片。讲述了马良用神笔帮助穷苦百姓的故事，主题鲜明，制作工艺精良，充满了正能量。</p>
+                    <div class="card-footer">
+                        <span class="tag">木偶</span>
+                        <span>获奖</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/ink_dragon/400/300" alt="牧笛海报" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">牧笛</h3>
+                    <div class="card-meta">
+                        <span>1963年</span>
+                        <span>水墨动画</span>
+                    </div>
+                    <p class="card-desc">水墨与音乐的完美结合。影片以一头水牛为主角，通过水墨晕染的技法，展现了江南水乡的宁静与诗意。</p>
+                    <div class="card-footer">
+                        <span class="tag">水墨</span>
+                        <span>艺术</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/monster/400/300" alt="阿凡提的故事海报" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">阿凡提的故事</h3>
+                    <div class="card-meta">
+                        <span>1980年</span>
+                        <span>木偶动画</span>
+                    </div>
+                    <p class="card-desc">以新疆民间传说人物阿凡提为主角，系列短片幽默风趣，讽刺了封建剥削和官僚主义，深受观众喜爱。</p>
+                    <div class="card-footer">
+                        <span class="tag">木偶</span>
+                        <span>寓言</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2 class="section-title">常见问题</h2>
+        <section class="intro-section">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <details style="border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">国产老动画片主要有哪些艺术形式？</summary>
+                    <p style="margin-top: 10px; color: var(--text-light);">
+                        国产老动画片（美术片）主要形式包括：水墨动画（如《小蝌蚪找妈妈》）、剪纸动画（如《猪八戒吃西瓜》）、木偶动画（如《神笔》）、折纸动画（如《鹅鹅鹅》）以及彩色胶片动画等。
+                    </p>
+                </details>
+                <details style="border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">哪里可以观看这些经典老动画？</summary>
+                    <p style="margin-top: 10px; color: var(--text-light);">
+                        许多经典作品已进入公有领域，在各大视频平台（如Bilibili、优酷等）的“经典动画”或“怀旧专区”通常可以找到高清修复版或原版资源。
+                    </p>
+                </details>
+                <details style="border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                    <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">“中国学派”是什么意思？</summary>
+                    <p style="margin-top: 10px; color: var(--text-light);">
+                        “中国学派”是中国动画界对上世纪五六十年代至八十年代，以上海美术电影制片厂为代表，在艺术风格上强调民族化、风格化，在世界动画史上独树一帜的创作群体的统称。
+                    </p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>经典动画馆</h3>
+                <p>致力于保护和传播中国优秀的传统动画文化。</p>
+                <p>让经典永流传，让回忆不褪色。</p>
+            </div>
+            <div class="footer-col">
+                <h3>快速导航</h3>
+                <ul>
+                    <li><a href="#">热门推荐</a></li>
+                    <li><a href="#">制作幕后</a></li>
+                    <li><a href="#">艺术家介绍</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>联系我们</h3>
+                <p>邮箱：contact@classic-animation.cn</p>
+                <p>地址：中国动画文化展示中心</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 经典动画馆. All Rights Reserved. 仅供展示学习使用.
+        </div>
+    </footer>
+
+</body>
+</html>
