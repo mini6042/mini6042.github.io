@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汤姆汉克斯主演的电影-经典影视作品与观影指南</title>
+    <meta name="description" content="汤姆汉克斯主演的电影全集收录，包括《阿甘正传》《拯救大兵瑞恩》《费城故事》等经典作品。提供详细剧情简介、影评分析及观影指南，助您重温影史经典。">
+    <meta name="keywords" content="汤姆汉克斯主演的电影,汤姆汉克斯电影列表,阿甘正传,拯救大兵瑞恩,费城故事,经典电影推荐">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            padding: 0.5rem;
+            border: none;
+            outline: none;
+            width: 150px;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            padding: 0 0.8rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Movie List */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .movie-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .movie-poster {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .movie-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+        }
+
+        .movie-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .movie-year {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            background: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .movie-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .movie-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .movie-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #1a252f;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .award-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .award-list span:first-child {
+            color: var(--text-main);
+        }
+
+        .award-list span:last-child {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .category-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Detailed Section */
+        .detail-section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+        }
+
+        .detail-poster {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .detail-info h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .detail-meta strong {
+            color: var(--primary-color);
+        }
+
+        .detail-content h3 {
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .detail-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .search-box {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span>🎬</span> 汤姆汉克斯影视库
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">全部电影</a></li>
+                <li><a href="#">剧情简介</a></li>
+                <li><a href="#">获奖记录</a></li>
+                <li><a href="#">幕后花絮</a></li>
+                <li><a href="#">观看指南</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索电影...">
+            <button>🔍</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>重温汤姆汉克斯的银幕传奇</h1>
+        <p>从《阿甘正传》的纯真奔跑到《拯救大兵瑞恩》的悲壮史诗，探索这位奥斯卡影帝跨越三十余年的经典作品。</p>
+        <div class="hero-tags">
+            <span class="tag">奥斯卡最佳男主角</span>
+            <span class="tag">经典剧情片</span>
+            <span class="tag">战争题材</span>
+            <span class="tag">生活流</span>
+        </div>
+    </div>
+</section>
+
+<main class="container main-grid">
+    <!-- Movie List Section -->
+    <section>
+        <div class="section-title">
+            <h2>精选推荐</h2>
+            <a href="#" style="font-size: 0.9rem; color: var(--accent-color);">查看全部 ></a>
+        </div>
+
+        <!-- Movie Card 1 -->
+        <article class="movie-card">
+            <img src="https://picsum.photos/seed/forrest/800/400" alt="阿甘正传电影海报" class="movie-poster">
+            <div class="movie-content">
+                <div class="movie-header">
+                    <h3 class="movie-title">阿甘正传</h3>
+                    <span class="movie-year">1994</span>
+                </div>
+                <div class="movie-meta">
+                    <span>导演：罗伯特·泽米吉斯</span>
+                    <span>类型：剧情 / 爱情</span>
+                </div>
+                <p class="movie-desc">
+                    阿甘是一个智商只有75的美国人，但他凭借诚实、守信和执着，在人生的道路上创造了奇迹。他见证了美国历史的变迁，从越战战场到乒乓外交，再到水门事件，他始终保持着内心的纯真。
+                </p>
+                <div class="movie-actions">
+                    <a href="#" class="btn btn-primary">查看详情</a>
+                    <a href="#" class="btn btn-outline">加入片单</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie Card 2 -->
+        <article class="movie-card">
+            <img src="https://picsum.photos/seed/saving/800/400" alt="拯救大兵瑞恩电影海报" class="movie-poster">
+            <div class="movie-content">
+                <div class="movie-header">
+                    <h3 class="movie-title">拯救大兵瑞恩</h3>
+                    <span class="movie-year">1998</span>
+                </div>
+                <div class="movie-meta">
+                    <span>导演：史蒂文·斯皮尔伯格</span>
+                    <span>类型：战争 / 动作</span>
+                </div>
+                <p class="movie-desc">
+                    二战期间，米勒上尉奉命带领一支小分队深入敌后，寻找并营救被敌军包围的兄弟——二等兵瑞恩。这不仅是一次军事任务，更是一场关于人性、牺牲与责任的人性探讨。
+                </p>
+                <div class="movie-actions">
+                    <a href="#" class="btn btn-primary">查看详情</a>
+                    <a href="#" class="btn btn-outline">加入片单</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie Card 3 -->
+        <article class="movie-card">
+            <img src="https://picsum.photos/seed/philly/800/400" alt="费城故事电影海报" class="movie-poster">
+            <div class="movie-content">
+                <div class="movie-header">
+                    <h3 class="movie-title">费城故事</h3>
+                    <span class="movie-year">1993</span>
+                </div>
+                <div class="movie-meta">
+                    <span>导演：乔纳森·戴米</span>
+                    <span>类型：剧情 / 爱情</span>
+                </div>
+                <p class="movie-desc">
+                    汤姆·汉克斯在片中饰演一位因患艾滋病而被律师事务所解雇的律师。他为了讨回公道，勇敢地走上法庭，揭露了社会对艾滋病患者的歧视，这是一部具有里程碑意义的作品。
+                </p>
+                <div class="movie-actions">
+                    <a href="#" class="btn btn-primary">查看详情</a>
+                    <a href="#" class="btn btn-outline">加入片单</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Movie Card 4 -->
+        <article class="movie-card">
+            <img src="https://picsum.photos/seed/castaway/800/400" alt="荒岛余生电影海报" class="movie-poster">
+            <div class="movie-content">
+                <div class="movie-header">
+                    <h3 class="movie-title">荒岛余生</h3>
+                    <span class="movie-year">2000</span>
+                </div>
+                <div class="movie-meta">
+                    <span>导演：罗伯特·泽米吉斯</span>
+                    <span>类型：冒险 / 剧情</span>
+                </div>
+                <p class="movie-desc">
+                    查克是一名联邦快递的工程师，因空难流落荒岛。在漫长的四年里，他不仅要面对生存的挑战，还要面对孤独和内心对生活的渴望。当他重返文明社会时，发现一切都已改变。
+                </p>
+                <div class="movie-actions">
+                    <a href="#" class="btn btn-primary">查看详情</a>
+                    <a href="#" class="btn btn-outline">加入片单</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Sidebar -->
+    <aside>
+        <div class="sidebar-widget">
+            <h3>职业生涯里程碑</h3>
+            <ul class="award-list">
+                <li><span>奥斯卡最佳男主角</span> <span>2次</span></li>
+                <li><span>金球奖影帝</span> <span>4次</span></li>
+                <li><span>美国电影学会百年百星</span> <span>TOP 25</span></li>
+                <li><span>获得荣誉平民勋章</span> <span>2006</span></li>
+                <li><span>吉尼斯世界纪录</span> <span>连续8年</span></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3>电影分类浏览</h3>
+            <ul class="category-list">
+                <li><a href="#">奥斯卡获奖作品 <span>(4)</span></a></li>
+                <li><a href="#">战争题材 <span>(2)</span></a></li>
+                <li><a href="#">浪漫爱情 <span>(3)</span></a></li>
+                <li><a href>科幻冒险 <span>(1)</span></a></li>
+                <li><a href="#">传记剧情 <span>(5)</span></a></li>
+                <li><a href="#">导演合作 <span>(3)</span></a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-widget">
+            <h3>观影建议</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                建议按时间顺序观看，以更好地理解汤姆汉克斯演技的演变。从早期的《飞越疯人院》到近期的《猫王》，每一部作品都值得细细品味。
+            </p>
+        </div>
+    </aside>
+</main>
+
+<!-- Detailed Feature Section -->
+<section class="container">
+    <div class="detail-section">
+        <div class="detail-grid">
+            <img src="https://picsum.photos/seed/forrest/300/450" alt="阿甘正传海报" class="detail-poster">
+            <div class="detail-info">
+                <h2>阿甘正传</h2>
+                <div class="detail-meta">
+                    <span><strong>上映年份：</strong>1994</span>
+                    <span><strong>豆瓣评分：</strong>9.5</span>
+                    <span><strong>IMDb评分：</strong>8.8</span>
+                    <span><strong>片长：</strong>142分钟</span>
+                </div>
+                <div class="detail-content">
+                    <h3>剧情简介</h3>
+                    <p>阿甘（Tom Hanks 饰）是一个智商只有75的美国人。他从小患有腿疾，不得不戴上一副笨重的金属支架。在母亲和珍妮的鼓励下，他克服了身体障碍，跑进了大学，甚至成为了橄榄球明星。他参军越战，在战场上救出了战友，后来又成为了乒乓球外交的使者，甚至成为了亿万富翁的养虾场主。阿甘的故事，就像一盒巧克力，你永远不知道下一颗是什么味道。</p>
+                    
+                    <h3>为什么值得看？</h3>
+                    <p>这部影片不仅是一部娱乐性极强的电影，更是一部关于美国历史的寓言。汤姆·汉克斯的表演朴实而真挚，将阿甘的纯真与执着演绎得淋漓尽致。影片的主题“生活就像一盒巧克力，你永远不知道下一颗是什么味道”成为了流传甚广的经典名言。</p>
+
+                    <h3>相关推荐</h3>
+                    <p>如果您喜欢《阿甘正传》，您可能还会喜欢《绿色奇迹》和《荒岛余生》。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>汤姆汉克斯影视库</h4>
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                    致力于收集和整理汤姆汉克斯主演的所有经典电影，为影迷提供最全面的观影资料和深度解析。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">电影列表</a></li>
+                    <li><a href="#">获奖记录</a></li>
+                    <li><a href="#">幕后花絮</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a href="#">IMDb 官方页面</a></li>
+                    <li><a href="#">豆瓣电影</a></li>
+                    <li><a href="#">维基百科</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 汤姆汉克斯影视库. All Rights Reserved. 本站仅用于影视资料整理与分享，不涉及任何商业利益。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
